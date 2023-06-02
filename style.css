@@ -185,6 +185,7 @@ div.add-elements {
 	color: blue;
 	font-style: normal;
 	align-items: center;
+	justify-content: center;
 	border-style: dashed;
 	border-width: 2px;
 	border-color: black;

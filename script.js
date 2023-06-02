@@ -192,6 +192,7 @@ function calculateGrade() {
 	}
 	if (pointGrade >= 100) letterGrade = "A+";
 	gradeElement.textContent = pointGrade.toFixed(2) + "% " + letterGrade;
+	gradeElement.classList.add("default-text");
 
 
 	categoryContainer.appendChild(gradeElement);
