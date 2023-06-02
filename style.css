@@ -1,0 +1,210 @@
+html {
+	background-image: url("background.png");
+	background-size: cover;
+	background-repeat: repeat;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-family: 'Cascadia Code';
+}
+
+.imageLogo {
+	max-width: 400px;
+	margin-top: 20px;
+}
+
+.default-button {
+	width: auto;
+	/* Allow the button to adjust its width based on content */
+	height: 36px;
+	padding: 0 16px;
+	/* Add padding to provide space around the button text */
+	color: white;
+	font-weight: bold;
+	background-color: rgb(2, 158, 255);
+	cursor: pointer;
+	font-size: 14px;
+	/* Increase the font size for better readability */
+	border: none;
+	/* Remove the border */
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
+	/* Add a smooth transition effect */
+	margin: 5px;
+}
+
+.default-button:hover {
+	background-color: rgb(0, 130, 210);
+	/* Darker background color on hover */
+}
+
+p.default-text {
+	width: 150px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+div.input-container label {
+	width: 120px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+input.input-string-label {
+	width: 200px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+input.input-number-label {
+	width: 25px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.add-elements {
+	width: 400px;
+	border-style: dashed;
+	border-color: black;
+	border-width: 2px;
+}
+
+.remove-category-button {
+	width: 74px;
+	height: 36px;
+	color: black;
+	font-weight: bold;
+	background-color: rgb(255, 216, 0);
+	cursor: pointer;
+	margin-left: 4px;
+	margin-right: 4px;
+	font-size: 12px;
+	border-radius: 10px;
+	float: right;
+}
+
+.expand-button {
+	width: 74px;
+	height: 36px;
+	color: black;
+	font-weight: bold;
+	background-color: rgb(76, 255, 0);
+	cursor: pointer;
+	margin-left: 4px;
+	margin-right: 4px;
+	font-size: 12px;
+	border-radius: 10px;
+	float: right;
+}
+
+.remove-button {
+	width: 74px;
+	height: 18px;
+	color: black;
+	font-weight: bold;
+	background-color: rgb(255 0 0);
+	cursor: pointer;
+	margin-left: 4px;
+	margin-right: 4px;
+	font-size: 8px;
+	border-radius: 10px;
+	float: right;
+}
+
+.json-functions {
+	border-style: dashed;
+	border-color: black;
+	width: 250px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-width: 2px;
+}
+
+json-input-format {
+	width: 250px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.json-string-format {
+	width: 250px;
+	font-size: 15px;
+	border-width: 2px;
+	overflow: auto;
+}
+
+.title {
+	margin: 10px 0;
+	color: blue;
+	font-style: normal;
+	text-align: center;
+	align-items: center;
+}
+
+
+
+h1.title {
+	color: blue;
+	font-style: normal;
+	text-align: center;
+}
+
+h2.title {
+	color: black;
+	font-style: normal;
+	text-align: center;
+}
+
+select.default-select {
+	width: 24px;
+}
+
+
+
+.boxed {
+	width: 600px;
+	border-style: dashed;
+	border-width: 2px;
+	border-color: black;
+	padding: 5px;
+	margin: 5px;
+}
+
+#grade-stats {
+	width: 250px;
+	border-style: dashed;
+	border-width: 2px;
+	border-color: black;
+	padding: 10px;
+	margin: 10px;
+}
+
+.assignment-list {
+	padding: 5px;
+	text-align: left;
+	width: 650px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	list-style-type: circle;
+
+	margin-left: auto;
+}
+
+#assignment-list {
+	border-style: dashed;
+	border-width: 2px;
+	border-color: black;
+}
+
+#categoryDropdown {
+	min-width: 100px;
+}
