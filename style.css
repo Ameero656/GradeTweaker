@@ -226,7 +226,8 @@ select.default-select {
 }
 
 #grade-stats {
-	max-height:fit-content;
+	max-height: fit-content;
+	max-width: fit-content;
 	font-size: 15px;
 	width: 250px;
 	background-color: rgb(84, 220, 0);
