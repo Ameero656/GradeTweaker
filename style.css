@@ -170,7 +170,7 @@ div.add-elements {
 .remove-button:hover {
 	background-color: rgb(162, 35, 35);
 }
-.json-functions {
+#json-functions {
 	max-width: 250px;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -274,4 +274,18 @@ select.default-select {
 #jsonH {
 	text-align: center;
 	color: white;
+}
+#goal-setting {
+	max-width: 250px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	background-color: #FF6347;
+	border-radius: 20px;
+	padding: 10px 20px;
+}
+#json-goals {
+	display:flex;
+
+	
 }
