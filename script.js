@@ -66,6 +66,7 @@ function populateNest() {
 
 		var assignmentsContainer = document.createElement("ul");
 		assignmentsContainer.classList.add("assignments");
+		
 
 		var assignments = data[category]["assignments"];
 		for (var assignmentName in assignments) {
@@ -100,7 +101,7 @@ function populateNest() {
 			assignmentElement.classList.add('assignment-list')
 			assignmentsContainer.appendChild(assignmentElement);
 		}
-
+		
 		categoryElement.appendChild(assignmentsContainer);
 		categoryContainer.appendChild(categoryElement);
 	}

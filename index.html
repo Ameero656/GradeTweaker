@@ -52,17 +52,16 @@
 				<div class="input-container label">
 					<label>Assignment Name</label>
 					<input type="text" id="assignmentName" class="input-string-label" />
+					
+					
 				</div>
 
 				<div class="input-container label">
 					<label>Assignment Score</label>
 					<input type="text" id="assignmentScore" class="input-number-label" />
-					<span class="score-span"'>/</span>
+					<span>/</span>
 					<input type="text" id="assignmentMaxScore" class="input-number-label" />
-
-
 				</div>
-
 				<div class="input-container label">
 					<label>Assignment Category</label>
 					<select class="default-select" id="categoryDropdown"></select>
@@ -78,9 +77,18 @@
 				<div id="categoryContainer"></div>
 			</div>
 		</div>
-		<!-- <div id="goal-setting">
-			<h2 class="default-text" id="jsonH">Goal Setting :</h2>
-		</div> -->
+		<div id="json-functions" class="json-functions">
+			<h2 class="default-text" id="jsonH">Import/Export JSON Data :</h2>
+			<p id="jsonExportString" class="json-string-format"></p>
+	
+			<p id="jsonExportString" class="json-string-format"></p>
+			<div class="json-button-functions">
+				<button onclick="copyJsonExport()" id="copyJsonExport" class="default-button">Copy Data String</button>
+				<button onclick="importJString()" class="default-button-red">Import</button>
+			</div>
+			<input type='text' id='jsonImport' class="json-input-format" />
+	
+		</div>
 	</div>
 
 
@@ -93,18 +101,7 @@
 
 
 
-	<div id="json-functions" class="json-functions">
-		<h2 class="default-text" id="jsonH">Import/Export JSON Data :</h2>
-		<p id="jsonExportString" class="json-string-format"></p>
-
-		<p id="jsonExportString" class="json-string-format"></p>
-		<div class="json-button-functions">
-			<button onclick="copyJsonExport()" id="copyJsonExport" class="default-button">Copy Data String</button>
-			<button onclick="importJString()" class="default-button-red">Import</button>
-		</div>
-		<input type='text' id='jsonImport' class="json-input-format" />
-
-	</div>
+	
 
 
 

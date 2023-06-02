@@ -7,7 +7,8 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
-	align-items: left;
+	align-items: center;
+	justify-content: center;
 	font-family: 'Cascadia Code';
 	width: 100%;
 	max-width: 100%;
@@ -28,23 +29,33 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+	body {
+		align-items: flex-start;
+	}
 	.content-wrapper {
 		width: 100%;
 		max-width: 100%;
+		
 		flex-direction: column;
 		justify-content: flex-start;
 		/* Align items to the left */
 		align-items: flex-start;
 		/* Align items to the top */
 	}
+}
 
-	@media screen and (min-width: 769px) and (min-height: 601px) {
+@media screen and (min-width: 769px) and (min-height: 601px) {
 		.content-wrapper {
 			max-width: 100%;
 			flex-direction: row;
 		}
 	}
-}
+
+@media screen and (max-width: 767px) {
+	.content-wrapper {
+	  width: 100%;
+	}
+  }
 
 
 
@@ -53,7 +64,6 @@ body {
 	width: 100%;
 	max-width: 100%;
 	height: auto;
-	margin-top: 20px;
 }
 
 .default-button {
@@ -62,10 +72,12 @@ body {
 	padding: 0 16px;
 	color: white;
 	font-weight: bold;
-	background-color: rgb(2, 158, 255);
+
+	background-color: rgb(0, 17, 255);
 	cursor: pointer;
 	font-size: 14px;
-	border: none;
+	border-width: 2px;
+	border-color:black;
 	border-radius: 10px;
 	transition: background-color 0.3s ease;
 	margin: 5px;
@@ -100,12 +112,13 @@ p.default-text {
 	margin-top: 10px;
 	padding: 10px;
 	font-size: 15px;
+	font-style:bold;
 	color: black;
 }
 
 div.input-container label {
 	max-width:100%;
-	background-color: rgb(73, 223, 253);
+	background-color: rgb(255, 0, 0);
 	border-radius: 10px;
 	padding:10px 10px;
 	margin-top: 15px;
@@ -120,7 +133,7 @@ input.input-string-label {
 	padding: 5px;
 	border-radius: 10px;
 	outline: none;
-	border-color: #66afe9;
+	border-color: #ff0000;
 }
 
 input.input-number-label {
@@ -130,14 +143,14 @@ input.input-number-label {
 	padding: 5px;
 	border-radius: 10px;
 	outline: none;
-	border-color: #66afe9;
+	border-color: #ff0000;;
 }
 
 div.add-elements {
 	display:flex;
 	flex-direction: column;
-	max-width:fit-content;
-	background-color: rgb(89, 243, 115);
+	box-sizing: border-box;
+	background-color: rgb(0, 154, 197);
 	border-radius: 20px;
 	padding:10px 10px;
 	margin-top: 15px;
@@ -187,7 +200,7 @@ div.add-elements {
 }
 
 #json-functions {
-	max-width: fit-content;
+	max-width: 650px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: #FF6347;
@@ -215,7 +228,7 @@ div.add-elements {
 }
 
 .main-title {
-	max-width: fit-content;
+	max-width: 650px;
 	margin-top: 15px;
 	color: blue;
 	font-style: normal;
@@ -228,6 +241,7 @@ div.add-elements {
 }
 
 .title {
+	justify-content: center;
 	width: auto;
 	font-family: monospace;
 	margin-top: 50px;
@@ -242,7 +256,7 @@ div.add-elements {
 	color: blue;
 	font-style: normal;
 	display: flex;
-	justify-content: left;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -257,17 +271,18 @@ div.add-elements {
 
 select.default-select {
 	width: 24px;
+	height: 50px;
 	padding: 5px;
 	border-radius: 10px;
-	box-show: 0 0 5px #66afe9;
 	outline: none;
-	border-color: #66afe9;
+	border-color: #ff0000;
+	border-width: 2px;
 }
 
 .boxed {
 	width: 100%;
-	max-width: 600px;
-	background-color: rgb(77, 0, 219);
+	max-width: 650px;
+	background-color: rgb(174, 222, 40);
 	border-radius: 20px;
 	padding: 5px;
 	margin: 5px;
@@ -275,25 +290,27 @@ select.default-select {
 
 #grade-stats {
 	max-width: fit-content;
+	height:auto;
 	font-size: 15px;
 	width: 250px;
 	background-color: rgb(84, 220, 0);
 	border-radius: 20px;
-	padding: 10px;
-	margin: 10px;
+	
 }
+
+
 
 #assignment-list {
 	flex: 1 0 auto;
 	padding: 10px 20px;
 	text-align: left;
-	max-width: fit-content;
+	max-width: 650px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	margin-left: 20px;
+	margin-left: 10px;
 	list-style-type: circle;
 	float: right;
-	background-color: rgb(96, 114, 255);
+	background-color: rgb(4, 185, 10);
 	border-radius: 20px;
 }
 
@@ -324,14 +341,17 @@ select.default-select {
 }
 
 #add-category {
-	background-color: rgb(10, 199, 136);
+	box-sizing: border-box;
+	max-width:fit-content;
+	background-color:#ff9d00;
 	border-radius: 20px;
 	flex: 0 0 auto;
 
 }
 
 #add-assignment {
-	background-color: rgb(10, 199, 136);
+	box-sizing: border-box;
+	background-color: #ff9d00;
 	border-radius: 20px;
 	flex: 0 0 auto;
 }
