@@ -307,7 +307,7 @@ select.default-select {
 
 .boxed {
 	width: 100%;
-	max-width: 650px;
+	max-width: fit-content;
 	background-color: rgb(174, 222, 40);
 	border-radius: 20px;
 	padding: 5px;
