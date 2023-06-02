@@ -15,72 +15,81 @@
 </head>
 
 
-<body>
+<body onload="calculateGrade()">
+	
 	<script src="script.js"></script>
-
-	<div id="title" class=add-elements>
-		<img class="imageLogo" src="gradeTweakerLogo.png" alt="loading..." />
-		<button class="default-button">Tweaker</button>
-		<button class="default-button">Tutorial</button>
-		<button class="default-button">Bug Report</button>
-	</div>
-
-
-	<div id="add-category" class="add-elements">
-		<h2 class="title">Add Category</h2>
-		<div class="input-container label">
-			<label>Category Name:</label>
-			<input type="text" id="categoryName" class="input-string-label" />
-		</div>
-
-		<div class="input-container label">
-			<label>Category Weight (%):</label>
-			<input type="text" id="categoryWeight" class="input-number-label" />
-		</div>
-		<div>
-			<button class="default-button" onclick="addCategory()">Add Category</button>
+	
+	<div id="title" class=main-title>
+		<img class="imageLogo" src="images/gradeTweakerLogo.png" alt="loading..." />
+		<div class = title-buttons>
+			<button class="default-button">Tweaker</button>
+			<button class="default-button">Tutorial</button>
+			<button class="default-button">Bug Report</button>
 		</div>
 	</div>
+	
+
+		<div id="add-category" class="add-elements">
+			<h1 class="title">Add Category</h1>
+			<div class="input-container label">
+				<label>Category Name:</label>
+				<input type="text" id="categoryName" class="input-string-label" />
+			</div>
+
+			<div class="input-container label">
+				<label>Category Weight (%):</label>
+				<input type="text" id="categoryWeight" class="input-number-label" />
+				<div>
+					<button class="default-button" onclick="addCategory()">Add Category</button>
+				</div>
+			</div>
+			
+	</div>	
+	<div class="content-wrapper">
+		<div class="add-elements" id="add-assignment">
+			<h1 class="title">Add Assignment</h1>
+			<div class="input-container label">
+				<label>Assignment Name:</label>
+				<input type="text" id="assignmentName" class="input-string-label" />
+			</div>
+
+			<div class="input-container label">
+				<label>Assignment Score:</label>
+				<input type="text" id="assignmentScore" class="input-number-label" />
+				<span>/</span>
+				<input type="text" id="assignmentMaxScore" class="input-number-label" />
 
 
-	<div class="add-elements" id="add-assignment">
-		<h2 class="title">Add Assignment</h2>
-		<div class="input-container label">
-			<label>Assignment Name:</label>
-			<input type="text" id="assignmentName" class="input-string-label" />
+			</div>
+
+			<div class="input-container label">
+				<label>Assignment Category:</label>
+				<select id="categoryDropdown"></select>
+			</div>
+			<div>
+				<button class="default-button" onclick="addAssignment()">Add Assignment</button>
+			</div>
 		</div>
-
-		<div class="input-container label">
-			<label>Assignment Score:</label>
-			<input type="text" id="assignmentScore" class="input-number-label" />
-			<span>/</span>
-			<input type="text" id="assignmentMaxScore" class="input-number-label" />
-
-
-		</div>
-
-		<div class="input-container label">
-			<label>Assignment Category:</label>
-			<select id="categoryDropdown"></select>
-		</div>
-		<div>
-			<button class="default-button" onclick="addAssignment()">Add Assignment</button>
+		<div id="assignment-list">
+			<div id="grade-stats" class="grade-stats">
+				<div id="final-grade"> </div>
+			</div>
+			<div id="categoryContainer"></div>
 		</div>
 	</div>
 
-	<div id="assignment-list" class="assignment-list">
-		<div id="categoryContainer"></div>
-	</div>
-	<div id="grade-stats" class="grade-stats">
-		<div id="final-grade"> </div>
-	</div>
+	
+	
 
 	<div id="json-functions" class="json-functions">
-		<p class="default-text">Import/Export JSON Data :</p>
+		<h2 class="default-text" id="jsonH">Import/Export JSON Data :</h2>
 		<p id="jsonExportString" class="json-string-format"></p>
-		<button onclick="copyJsonExport()" id="copyJsonExport">Copy Data String</button>
+		<div class="json-button-functions">
+			<button onclick="copyJsonExport()" id="copyJsonExport" class="default-button">Copy Data String</button>
+			<button onclick="importJString()" class="default-button-red">Import</button>
+		</div>
 		<input type='text' id='jsonImport' class="json-input-format" />
-		<button onclick="importJString()">Import</button>
+		
 	</div>
 
 

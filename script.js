@@ -1,4 +1,5 @@
 let data = {}
+let stringifitedData = "";
 
 window.addEventListener('beforeunload', function(e) {
 	// Cancel the event
@@ -103,14 +104,7 @@ function populateNest() {
 // Call the function to populate the table 
 
 function updateJString() {
-	var jsonContainer = document.getElementById('jsonExportString');
-	jsonContainer.innerHTML = "";
-	jsonExportStringElement = document.createElement('pre');
-	jsonExportStringElement.textContent = JSON.stringify(data);
-
-	jsonExportStringElement.classList.add('json-string-format');
-
-	jsonContainer.appendChild(jsonExportStringElement);
+	stringifitedData = JSON.stringify(data);
 }
 function importJString() {
 	var jsonImport = document.getElementById("jsonImport").value;
@@ -140,14 +134,9 @@ function updateCategoryDropdown() {
 
 
 function copyJsonExport() {
-	var jsonContainer = document.getElementById('jsonExportString');
-	var range = document.createRange();
-	range.selectNode(jsonContainer);
-	window.getSelection().removeAllRanges();
-	window.getSelection().addRange(range);
-	document.execCommand('copy');
-	window.getSelection().removeAllRanges();
-	alert("Data Copied!");
+
+	navigator.clipboard.writeText(stringifitedData);
+	alert("Copied!");
 }
 function addCategory() {
 	const categoryName = document.getElementById('categoryName');
@@ -202,7 +191,7 @@ function calculateGrade() {
 		}
 	}
 	if (pointGrade >= 100) letterGrade = "A+";
-	gradeElement.textContent = "Final Grade:" + pointGrade.toFixed(2) + "% " + letterGrade;
+	gradeElement.textContent = pointGrade.toFixed(2) + "% " + letterGrade;
 
 
 	categoryContainer.appendChild(gradeElement);

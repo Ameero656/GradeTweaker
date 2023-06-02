@@ -1,5 +1,5 @@
 html {
-	background-image: url("background.png");
+	background-image: url("images/background.png");
 	background-size: cover;
 	background-repeat: repeat;
 }
@@ -7,40 +7,75 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+	align-items: left;
 	font-family: 'Cascadia Code';
 }
 
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	max-width: 400px; /* Change this as needed */
+}
+
+@media screen and (min-width: 768px) {
+	.content-wrapper {
+		flex-direction: row;
+		justify-content: flex-start; /* Align items to the left */
+		align-items: flex-start; /* Align items to the top */
+	}
+
+	#add-category {
+		flex: 0 0 auto; /* Don't grow, don't shrink, initial size auto */
+	}
+
+	#assignment-list {
+		flex: 1 0 auto; /* Grow to take up remaining space, don't shrink, initial size auto */
+		margin-left: 20px; /* Add some spacing between the columns */
+	}
+}
+
 .imageLogo {
-	max-width: 400px;
+	max-width: 450px;
 	margin-top: 20px;
 }
 
 .default-button {
 	width: auto;
-	/* Allow the button to adjust its width based on content */
 	height: 36px;
 	padding: 0 16px;
-	/* Add padding to provide space around the button text */
 	color: white;
-	font-weight: bold;
+	font-weight: bold;	
 	background-color: rgb(2, 158, 255);
 	cursor: pointer;
 	font-size: 14px;
-	/* Increase the font size for better readability */
 	border: none;
-	/* Remove the border */
 	border-radius: 10px;
 	transition: background-color 0.3s ease;
-	/* Add a smooth transition effect */
+	margin: 5px;
+}
+
+.default-button-red {
+	width: auto;
+	height: 36px;
+	padding: 0 16px;
+	color: white;
+	font-weight: bold;	
+	background-color: rgb(247, 40, 40);
+	cursor: pointer;
+	font-size: 14px;
+	border: none;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
 	margin: 5px;
 }
 
 .default-button:hover {
 	background-color: rgb(0, 130, 210);
-	/* Darker background color on hover */
+}
+
+.default-button-red:hover {
+	background-color: rgb(195, 10, 10);
 }
 
 p.default-text {
@@ -71,10 +106,14 @@ input.input-number-label {
 }
 
 div.add-elements {
+	flex: 0 0 auto;
 	width: 400px;
-	border-style: dashed;
-	border-color: black;
-	border-width: 2px;
+	background-color: rgb(238, 203, 28);
+	border-radius: 20px;
+	padding: 10px 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: white;
 }
 
 .remove-category-button {
@@ -89,47 +128,45 @@ div.add-elements {
 	font-size: 12px;
 	border-radius: 10px;
 	float: right;
+	transition: background-color 0.3s ease;
+	justify-content: center;
+}
+.remove-category-button:hover {
+	background-color: rgb(151, 132, 27);
 }
 
-.expand-button {
-	width: 74px;
-	height: 36px;
-	color: black;
-	font-weight: bold;
-	background-color: rgb(76, 255, 0);
-	cursor: pointer;
-	margin-left: 4px;
-	margin-right: 4px;
-	font-size: 12px;
-	border-radius: 10px;
-	float: right;
-}
 
 .remove-button {
 	width: 74px;
 	height: 18px;
 	color: black;
 	font-weight: bold;
-	background-color: rgb(255 0 0);
+	background-color: rgb(226, 51, 51);
 	cursor: pointer;
 	margin-left: 4px;
 	margin-right: 4px;
-	font-size: 8px;
+	font-size: 12px;
 	border-radius: 10px;
+	transition: background-color 0.3s ease;
 	float: right;
 }
-
+.remove-button:hover {
+	background-color: rgb(162, 35, 35);
+}
 .json-functions {
-	border-style: dashed;
-	border-color: black;
 	width: 250px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	border-width: 2px;
+	background-color: #FF6347;
+	border-radius: 20px;
+	padding: 10px 20px;
+}
+.json-button-functions {
+	display:flex;
 }
 
-json-input-format {
-	width: 250px;
+.json-input-format {
+	width: 225px;
 	padding: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -142,33 +179,41 @@ json-input-format {
 	overflow: auto;
 }
 
-.title {
-	margin: 10px 0;
+.main-title {
+	max-width: fit-content;
+	margin-top: 15px;
 	color: blue;
 	font-style: normal;
-	text-align: center;
+	align-items: center;
+	border-style: dashed;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 10px;
+}
+
+.title {
+	width: auto;
+	font-family: monospace;
+	margin-top: 50px;
+	color: black;
+	font-style: normal;
+	display: flex;
 	align-items: center;
 }
 
-
-
-h1.title {
+.title-buttons {
+	width: auto;
+	margin-top: 50px;
 	color: blue;
 	font-style: normal;
-	text-align: center;
-}
-
-h2.title {
-	color: black;
-	font-style: normal;
-	text-align: center;
+	display: flex;
+	justify-content: left;
+	align-items: center;
 }
 
 select.default-select {
 	width: 24px;
 }
-
-
 
 .boxed {
 	width: 600px;
@@ -180,31 +225,34 @@ select.default-select {
 }
 
 #grade-stats {
+	max-height:fit-content;
+	font-size: 15px;
 	width: 250px;
-	border-style: dashed;
-	border-width: 2px;
-	border-color: black;
+	background-color: rgb(84, 220, 0);
+	border-radius: 20px;
 	padding: 10px;
 	margin: 10px;
 }
 
-.assignment-list {
-	padding: 5px;
+#assignment-list {
+	padding: 20px;
 	text-align: left;
 	width: 650px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	margin-left: 20px;
 	list-style-type: circle;
-
-	margin-left: auto;
-}
-
-#assignment-list {
-	border-style: dashed;
-	border-width: 2px;
-	border-color: black;
+	float: right;
+	flex: 1 0 auto;
+	background-color: rgb(96, 114, 255);
+	border-radius: 20px;
 }
 
 #categoryDropdown {
 	min-width: 100px;
+}
+
+#jsonH {
+	text-align: center;
+	color: white;
 }
