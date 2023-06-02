@@ -84,6 +84,9 @@ body {
 }
 
 .default-button-red {
+	border-width: 2px;
+	border-color:black;
+	border-radius: 10px;
 	width: auto;
 	height: 36px;
 	padding: 0 16px;
@@ -98,12 +101,33 @@ body {
 	margin: 5px;
 }
 
+.default-button-green {
+	border-width: 2px;
+	border-color:black;
+	border-radius: 10px;
+	width: auto;
+	height: 36px;
+	padding: 0 16px;
+	color: black;
+	font-weight: bold;
+	background-color: rgb(0, 255, 0);
+	cursor: pointer;
+	font-size: 14px;
+	border: none;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
+	margin: 5px;
+}
 .default-button:hover {
 	background-color: rgb(0, 130, 210);
 }
 
 .default-button-red:hover {
 	background-color: rgb(195, 10, 10);
+}
+
+.default-button-green:hover {
+	background-color: rgb(7, 201, 1);
 }
 
 p.default-text {
@@ -203,7 +227,7 @@ div.add-elements {
 	max-width: 650px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: #FF6347;
+	background-color: #ff2600;
 	border-radius: 20px;
 	padding: 10px 20px;
 }
@@ -258,6 +282,8 @@ div.add-elements {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: fit-content;
+	padding: 20px;
 }
 
 .bubble {
