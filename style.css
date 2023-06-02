@@ -9,7 +9,15 @@ body {
 	flex-direction: column;
 	align-items: left;
 	font-family: 'Cascadia Code';
+	width: 100% - 15px;
+	max-width: 100%;
+	height: auto;
+	overflow-x:hidden;
+	box-sizing: border-box;
+  	padding-right: calc(100vw - 100%);
 }
+
+
 
 .content-wrapper {
 	display: flex;
@@ -20,11 +28,18 @@ body {
 
 @media screen and (min-width: 768px) {
 	.content-wrapper {
-		flex-direction: row;
+		width: 100%;
+    	max-width: 100%;
+		flex-direction: column;
 		justify-content: flex-start; /* Align items to the left */
 		align-items: flex-start; /* Align items to the top */
 	}
-
+	@media screen and (min-width: 769px) and (min-height: 601px) {
+		.content-wrapper {
+			max-width: 100%;
+			flex-direction: row;
+		}
+	}
 	#add-category {
 		flex: 0 0 auto; /* Don't grow, don't shrink, initial size auto */
 	}
@@ -36,7 +51,9 @@ body {
 }
 
 .imageLogo {
-	max-width: 425px;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
 	margin-top: 20px;
 }
 
@@ -107,7 +124,7 @@ input.input-number-label {
 
 div.add-elements {
 	flex: 0 0 auto;
-	width: 400px;
+	max-width: 400px;
 	background-color: rgb(238, 203, 28);
 	border-radius: 20px;
 	padding: 10px 20px;
@@ -154,7 +171,7 @@ div.add-elements {
 	background-color: rgb(162, 35, 35);
 }
 .json-functions {
-	width: 250px;
+	max-width: 250px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: #FF6347;
@@ -203,7 +220,6 @@ div.add-elements {
 }
 
 .title-buttons {
-	width: auto;
 	margin-top: 50px;
 	color: blue;
 	font-style: normal;
@@ -217,7 +233,8 @@ select.default-select {
 }
 
 .boxed {
-	width: 600px;
+	width: 100%;
+	max-width: 600px;
 	border-style: dashed;
 	border-width: 2px;
 	border-color: black;
@@ -239,7 +256,7 @@ select.default-select {
 #assignment-list {
 	padding: 20px;
 	text-align: left;
-	width: 650px;
+	max-width: 650px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 20px;

@@ -1,6 +1,14 @@
 let data = {}
 let stringifitedData = "";
 
+window.onload = function() {
+	if (document.body.scrollHeight > window.innerHeight) {
+	  document.body.style.paddingRight = '15px';
+	} else {
+	  document.body.style.paddingRight = '0';
+	}
+  };
+
 window.addEventListener('beforeunload', function(e) {
 	// Cancel the event
 	e.preventDefault();
