@@ -1,5 +1,7 @@
 let data = {}
-let stringifitedData = "";
+let stringifiedData = "";
+
+
 
 window.onload = function() {
 	if (document.body.scrollHeight > window.innerHeight) {
@@ -8,20 +10,31 @@ window.onload = function() {
 	  document.body.style.paddingRight = '0';
 	}
   };
+  
 
 window.addEventListener('beforeunload', function(e) {
-	// Cancel the event
-	e.preventDefault();
-	// Chrome requires returnValue to be set
-	e.returnValue = '';
+	if (stringifiedData.length > 0){
+		// Cancel the event
+		e.preventDefault();
+		// Chrome requires returnValue to be set
+		e.returnValue = '';
 
-	// Prompt the confirmation dialog
-	var confirmationMessage = 'Are you sure you want to leave this page?';
-	(e || window.event).returnValue = confirmationMessage; // Cross-browser support
+		// Prompt the confirmation dialog
+		var confirmationMessage = 'Are you sure you want to leave this page?';
+		(e || window.event).returnValue = confirmationMessage; // Cross-browser support
 
-	// Return the confirmation message
-	return confirmationMessage;
+		// Return the confirmation message
+		return confirmationMessage;
+	}
 });
+document.getElementById("goalpage-button").addEventListener("click", function() {
+	// Redirect to the desired HTML page
+	window.location.href = "goalpage.html";
+})
+
+function goToPage(file) {
+	window.location.href = file;
+}
 
 function removeButtonClickHandler(event) {
 	var category = event.target.getAttribute("data-category");
@@ -113,7 +126,8 @@ function populateNest() {
 // Call the function to populate the table 
 
 function updateJString() {
-	stringifitedData = JSON.stringify(data);
+	stringifiedData = JSON.stringify(data);
+	
 }
 function importJString() {
 	var jsonImport = document.getElementById("jsonImport").value;
@@ -144,8 +158,19 @@ function updateCategoryDropdown() {
 
 function copyJsonExport() {
 
-	navigator.clipboard.writeText(stringifitedData);
-	alert("Copied!");
+	if (/Mobi/.test(navigator.userAgent) && !navigator.clipboard) {
+		// Mobile device without clipboard support
+		alert("Clipboard access is not supported on this device.");
+		return;
+	  }
+	
+	  navigator.clipboard.writeText(stringifiedData)
+		.then(function() {
+		  alert("Copied!");
+		})
+		.catch(function(error) {
+		  console.error("Failed to copy: ", error);
+		});
 }
 function addCategory() {
 	const categoryName = document.getElementById('categoryName');

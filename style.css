@@ -143,6 +143,9 @@ p.default-text {
 div.input-container label {
 	max-width:100%;
 	background-color: rgb(255, 0, 0);
+	border-style:groove;
+	border-color:black;
+	border-width: 2px;
 	border-radius: 10px;
 	padding:10px 10px;
 	margin-top: 15px;
@@ -174,8 +177,11 @@ div.add-elements {
 	display:flex;
 	flex-direction: column;
 	box-sizing: border-box;
-	background-color: rgb(0, 154, 197);
+	background-color: rgb(50, 198, 239);
 	border-radius: 20px;
+	border-width: 2px;
+	border-color: black;
+	border-style: groove;
 	padding:10px 10px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -224,6 +230,9 @@ div.add-elements {
 }
 
 #json-functions {
+	border-color: black;
+	border-style: groove;
+	border-width: 2px;
 	max-width: 650px;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -288,11 +297,16 @@ div.add-elements {
 
 .bubble {
 	max-width:100%;
-	background-color: rgb(89, 243, 115);
+	background-color: rgb(3, 181, 110);
 	border-radius: 20px;
 	padding:10px 10px;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+h1 {
+	font-family:sans-serif;
+	font-style: normal;
 }
 
 select.default-select {
