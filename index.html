@@ -30,52 +30,52 @@
 	</div>
 
 	<div class="add-elements">
-		<div id="add-category" class="add-elements">
-			
-			<h1 class="title, bubble">Add Category</h1>
-			<div class="input-container label">
-				<label class="default-text">Category Name</label>
-				<input type="text" id="categoryName" class="input-string-label" />
-			</div>
-
-			<div class="input-container label">
-				<label>Category Weight (%)</label>
-				<input type="text" id="categoryWeight" class="input-number-label" />
-				<div>
-					<button class="default-button" onclick="addCategory()">Add Category</button>
-				</div>
-			</div>
-		</div>
-		<div class="content-wrapper">
-			<div class="add-elements" id="add-assignment">
-				<h1 class="title, bubble">Add Assignment</h1>
+			<div id="add-category" class="add-elements">
+				
+				<h1 class="title, bubble">Add Category</h1>
 				<div class="input-container label">
-					<label>Assignment Name</label>
-					<input type="text" id="assignmentName" class="input-string-label" />
-					
-					
+					<label class="default-text">Category Name</label>
+					<input type="text" id="categoryName" class="input-string-label" />
 				</div>
 
 				<div class="input-container label">
-					<label>Assignment Score</label>
-					<input type="text" id="assignmentScore" class="input-number-label" />
-					<span>/</span>
-					<input type="text" id="assignmentMaxScore" class="input-number-label" />
-				</div>
-				<div class="input-container label">
-					<label>Assignment Category</label>
-					<select class="default-select" id="categoryDropdown"></select>
-				</div>
-				<div>
-					<button class="default-button" onclick="addAssignment()">Add Assignment</button>
+					<label>Category Weight (%)</label>
+					<input type="text" id="categoryWeight" class="input-number-label" />
+					<div>
+						<button class="default-button" onclick="addCategory()">Add Category</button>
+					</div>
 				</div>
 			</div>
-			<div id="assignment-list">
-				<div id="grade-stats" class="grade-stats">
-					<div id="final-grade"> </div>
+			<div class="content-wrapper">
+				<div class="add-elements" id="add-assignment">
+					<h1 class="title, bubble">Add Assignment</h1>
+					<div class="input-container label">
+						<label>Assignment Name</label>
+						<input type="text" id="assignmentName" class="input-string-label" />
+						
+						
+					</div>
+
+					<div class="input-container label">
+						<label>Assignment Score</label>
+						<input type="text" id="assignmentScore" class="input-number-label" />
+						<span>/</span>
+						<input type="text" id="assignmentMaxScore" class="input-number-label" />
+					</div>
+					<div class="input-container label">
+						<label>Assignment Category</label>
+						<select class="default-select" id="categoryDropdown"></select>
+					</div>
+					<div>
+						<button class="default-button" onclick="addAssignment()">Add Assignment</button>
+					</div>
 				</div>
-				<div id="categoryContainer"></div>
-			</div>
+				<div id="assignment-list">
+					<div id="grade-stats" class="grade-stats">
+						<div id="final-grade"> </div>
+					</div>
+					<div id="categoryContainer"></div>
+				</div>
 		</div>
 		<div id="json-functions" class="json-functions">
 			<h2 class="default-text" id="jsonH">Import/Export JSON Data :</h2>

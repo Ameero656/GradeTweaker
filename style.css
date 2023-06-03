@@ -31,6 +31,7 @@ body {
 @media screen and (min-width: 768px) {
 	body {
 		align-items: flex-start;
+		font-family: 'Cascadia Code';
 	}
 	.content-wrapper {
 		width: 100%;
@@ -190,10 +191,11 @@ div.add-elements {
 }
 
 .remove-category-button {
+	font-weight:bold;
+	font-family: 'Cascadia Code';
 	width: 74px;
 	height: 36px;
 	color: black;
-	font-weight: bold;
 	background-color: rgb(255, 216, 0);
 	cursor: pointer;
 	margin-left: 4px;
@@ -202,7 +204,6 @@ div.add-elements {
 	border-radius: 10px;
 	float: right;
 	transition: background-color 0.3s ease;
-	justify-content: center;
 }
 
 .remove-category-button:hover {
@@ -211,11 +212,12 @@ div.add-elements {
 
 
 .remove-button {
+	font-weight:bold;
+	font-family: 'Cascadia Code';
 	width: 74px;
 	height: 18px;
 	color: black;
-	font-weight: bold;
-	background-color: rgb(226, 51, 51);
+	background-color: rgb(255, 0, 0);
 	cursor: pointer;
 	margin-left: 4px;
 	margin-right: 4px;
@@ -305,8 +307,7 @@ div.add-elements {
 }
 
 h1 {
-	font-family:sans-serif;
-	font-style: normal;
+	font-weight:bold;
 }
 
 select.default-select {
@@ -340,11 +341,12 @@ select.default-select {
 
 
 
+
 #assignment-list {
 	flex: 1 0 auto;
 	padding: 10px 20px;
 	text-align: left;
-	max-width: 650px;
+	max-width: fit-content;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 10px;
