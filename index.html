@@ -1,110 +1,88 @@
 <!DOCTYPE html>
-
-
-
 <html lang="en">
 
 <head>
-
-	<title>Tweaker</title>
-	<link rel="stylesheet" href="styleformal.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description"
-		content="Introducing GradeTweaker: A comprehensive and interactive website that empowers you to experiment and analyze your gradebook in a dynamic and user-friendly environment. With GradeTweaker, you can effortlessly track and manipulate your assignments, grades, and categories to gain a deeper understanding of your academic progress." />
+    <title>Tweaker</title>
+    <link rel="stylesheet" href="styleformal.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Introducing GradeTweaker: A comprehensive and interactive website that empowers you to experiment and analyze your gradebook in a dynamic and user-friendly environment. With GradeTweaker, you can effortlessly track and manipulate your assignments, grades, and categories to gain a deeper understanding of your academic progress." />
 </head>
 
-
 <body onload="calculateGrade()">
+    <script src="script.js"></script>
 
-	<script src="script.js"></script>
+    <div id="main-title">
+        <h1 id="main-title">Grade Calculator</h1>
+    </div>
+    <div class="site-tabs">
+        <button class="tab" onclick="openTab(event, 'Tweaker')">Tweaker</button>
+        <button class="tab" onclick="openTab(event, 'GoalSetting')">GoalSetting</button>
+        <button class="tab" onclick="openTab(event, 'BugReport')">Bug Report</button>
+    </div>
+    <div id="Tweaker" class="tabcontent add-elements">
+        <div class="content-wrapper">
+            <div id="add-data">
+                <div id="addCategory">
+                    <h1 class="title bubble">Add Category</h1>
+                    <div class="input-container label">
+                        <label class="default-text">Category Name</label>
+                        <input type="text" id="categoryName" class="input-string-label" />
+                    </div>
 
-	<div id=main-title>
-		<h1>Grade Calculator</h1>
-	</div>
-	<div class=site-tabs>
-		<button class="tab" onclick="openTab(event, 'Tweaker')">Tweaker</button>
-		<button class="tab" onclick="openTab(event, 'GoalSetting')">GoalSetting</button>
-		<button class="tab" onclick="openTab(event, 'BugReport')">Bug Report</button>
-	</div>
-	<div id="Tweaker" class="tabcontent add-elements">
+                    <div class="input-container label">
+                        <label>Category Weight (%)</label>
+                        <input type="text" id="categoryWeight" class="input-number-label" />
+                        <div>
+                            <button class="default-button" onclick="addCategory()">Add Category</button>
+                        </div>
+                    </div>
+                </div>
 
-			<div id="add-category" class="add-elements">
-				
-				<h1 class="title, bubble">Add Category</h1>
-				<div class="input-container label">
-					<label class="default-text">Category Name</label>
-					<input type="text" id="categoryName" class="input-string-label" />
-				</div>
+                <div id="add-assignment">
+                    <h1 class="title  bubble">Add Assignment</h1>
+                    <div class="input-container label">
+                        <label>Assignment Name</label>
+                        <input type="text" id="assignmentName" class="input-string-label" />
 
-				<div class="input-container label">
-					<label>Category Weight (%)</label>
-					<input type="text" id="categoryWeight" class="input-number-label" />
-					<div>
-						<button class="default-button" onclick="addCategory()">Add Category</button>
-					</div>
-				</div>
-			</div>
-			<div class="content-wrapper">
-				<div class="add-elements" id="add-assignment">
-					<h1 class="title, bubble">Add Assignment</h1>
-					<div class="input-container label">
-						<label>Assignment Name</label>
-						<input type="text" id="assignmentName" class="input-string-label" />
-						
-						
-					</div>
 
-					<div class="input-container label">
-						<label>Assignment Score</label>
-						<input type="text" id="assignmentScore" class="input-number-label" />
-						<span>/</span>
-						<input type="text" id="assignmentMaxScore" class="input-number-label" />
-					</div>
-					<div class="input-container label">
-						<label>Assignment Category</label>
-						<select class="default-select" id="categoryDropdown"></select>
-					</div>
-					<div>
-						<button class="default-button" onclick="addAssignment()">Add Assignment</button>
-					</div>
-				</div>
-				<div id="assignment-list">
-					<div id="grade-stats" class="grade-stats">
-						<div id="final-grade"> </div>
-					</div>
-					<div id="categoryContainer"></div>
-				</div>
-		</div>
+                    </div>
+
+                    <div class="input-container label">
+                        <label>Assignment Score</label>
+                        <input type="text" id="assignmentScore" class="input-number-label" />
+                        <span>/</span>
+                        <input type="text" id="assignmentMaxScore" class="input-number-label" />
+                    </div>
+                    <div class="input-container label">
+                        <label>Assignment Category</label>
+                        <select class="default-select" id="categoryDropdown"></select>
+                    </div>
+                    <div>
+                        <button class="default-button" onclick="addAssignment()">Add Assignment</button>
+                    </div>
+                </div>
+            </div>
+            <div id="assignment-list">
+                <div id="grade-stats" class="grade-stats">
+                    <div id="final-grade"> </div>
+                </div>
+                <div id="categoryContainer"></div>
+            </div>
+        </div>
+    
 		<div id="json-functions" class="json-functions">
 			<h2 class="default-text" id="jsonH">Import/Export JSON Data :</h2>
-			<p id="jsonExportString" class="json-string-format"></p>
-	
-			<p id="jsonExportString" class="json-string-format"></p>
+			<p class="json-string-format" id="jsonExportString"></p>
+
 			<div class="json-button-functions">
 				<button onclick="copyJsonExport()" id="copyJsonExport" class="default-button">Copy Data String</button>
 				<button onclick="importJString()" class="default-button-green">Import</button>
 			</div>
-			<input type='text' id='jsonImport' class="json-input-format" />
-	
+			<input type="text" id="jsonImport" class="json-input-format" />
 		</div>
-	</div>
-
-
-
-
-
-	
-
-
-
-
-
-	
-
-
-
+    </div>
 </body>
 
 </html>

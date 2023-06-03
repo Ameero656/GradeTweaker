@@ -1,289 +1,264 @@
 html {
-    background-color: white;
-	background-size: cover;
-	background-repeat: repeat;
-}
-
-body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-family: 'Cascadia Code';
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	overflow-x: hidden;
-	box-sizing: border-box;
-	padding-right: calc(100vw - 100%);
-}
-
-
-
-.content-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: left;
-	max-width: 400px;
-	/* Change this as needed */
-}
-
-@media screen and (min-width: 768px) {
-	body {
-		align-items: flex-start;
-		font-family: 'Cascadia Code';
-	}
-	.content-wrapper {
-		width: 100%;
-		max-width: 100%;
-		
-		flex-direction: column;
-		justify-content: flex-start;
-		/* Align items to the left */
-		align-items: flex-start;
-		/* Align items to the top */
-	}
-}
-
-@media screen and (min-width: 769px) and (min-height: 601px) {
-		.content-wrapper {
-			max-width: 100%;
-			flex-direction: row;
-		}
-	}
-
-@media screen and (max-width: 767px) {
-	.content-wrapper {
-	  width: 100%;
-	}
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-repeat: repeat;
   }
-
-
-
-
-.imageLogo {
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-}
-
-.default-button {
-	width: auto;
-	height: 36px;
-	padding: 0 16px;
-	color: white;
-	font-weight: bold;
-
-	background-color: rgb(0, 17, 255);
-	cursor: pointer;
-	font-size: 14px;
-	border-width: 2px;
-	border-color:black;
-	transition: background-color 0.3s ease;
-	margin: 5px;
-}
-
-.default-button-red {
-	border-width: 2px;
-	border-color:black;
-	 
-	width: auto;
-	height: 36px;
-	padding: 0 16px;
-	color: white;
-	font-weight: bold;
-	background-color: rgb(247, 40, 40);
-	cursor: pointer;
-	font-size: 14px;
-	border: none;
-	 
-	transition: background-color 0.3s ease;
-	margin: 5px;
-}
-
-.default-button-green {
-	border-width: 2px;
-	border-color:black;
-	 
-	width: auto;
-	height: 36px;
-	padding: 0 16px;
-	color: black;
-	font-weight: bold;
-	background-color: rgb(0, 255, 0);
-	cursor: pointer;
-	font-size: 14px;
-	border: none;
-	 
-	transition: background-color 0.3s ease;
-	margin: 5px;
-}
-.default-button:hover {
-	background-color: rgb(0, 130, 210);
-}
-
-.default-button-red:hover {
-	background-color: rgb(195, 10, 10);
-}
-
-.default-button-green:hover {
-	background-color: rgb(7, 201, 1);
-}
-
-p.default-text {
-	width: 150px;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	padding: 10px;
-	font-size: 15px;
-	font-style:bold;
-	color: black;
-}
-
-div.input-container label {
-	max-width:100%;
-	 
-	padding:10px 10px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	
-}
-
-input.input-string-label {
-	width: 120px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding: 5px;
-	 
-	outline: none;
-	border-color: #ff0000;
-}
-
-input.input-number-label {
-	width: 20px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding: 5px;
-	 
-	outline: none;
-	border-color: #ff0000;;
-}
-
-div.add-elements {
-	display:flex;
-	flex-direction: column;
-	box-sizing: border-box;
-	background-color: rgb(50, 198, 239);
-	border-width: 2px;
-	border-color: black;
-	border-style: groove;
-	padding:10px;
-    padding-top:0px;
-	margin: 15px;
-	color: black;
-
-}
-
-.remove-category-button {
-	font-weight:bold;
-	font-family: 'Cascadia Code';
-	width: 74px;
-	height: 36px;
-	color: black;
-	background-color: rgb(255, 216, 0);
-	cursor: pointer;
-	margin-left: 4px;
-	margin-right: 4px;
-	font-size: 12px;
-	 
-	float: right;
-	transition: background-color 0.3s ease;
-}
-
-.remove-category-button:hover {
-	background-color: rgb(151, 132, 27);
-}
-
-
-.remove-button {
-	font-weight:bold;
-	font-family: 'Cascadia Code';
-	width: 74px;
-	height: 18px;
-	color: black;
-	background-color: rgb(255, 0, 0);
-	cursor: pointer;
-	margin-left: 4px;
-	margin-right: 4px;
-	font-size: 12px;
-	transition: background-color 0.3s ease;
-	float: right;
-}
-
-.remove-button:hover {
-	background-color: rgb(162, 35, 35);
-}
-
-#json-functions {
-	border-color: black;
-	border-style: groove;
-	border-width: 2px;
-	max-width: 650px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	background-color: #ff2600;
-	padding: 10px 20px;
-}
-
-.json-button-functions {
-	display: flex;
-}
-
-.json-input-format {
-	width: 100% ;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	box-sizing: border-box;
-}
-
-
-
-.score-span {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-
-#main-title {
-    margin:0;
-    padding:10px;
-    background-color: bisque;
-    margin:0;
-    display:flex;
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cascadia Code';
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding-right: calc(100vw - 100%);
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 400px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    #assignment-list {
+        min-width: 500px;
+    }
+    body {
+      align-items: flex-start;
+      font-family: 'Cascadia Code';
+    }
+    .content-wrapper {
+      width: 100%;
+      max-width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (min-height: 601px) {
+    .content-wrapper {
+      max-width: 100%;
+      flex-direction: row;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .content-wrapper {
+      width: 100%;
+    }
+  }
+  
+  .imageLogo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .default-button {
+    width: auto;
+    height: 36px;
+    padding: 0 16px;
+    color: white;
+    font-weight: bold;
+    background-color: #007bff;
+    cursor: pointer;
+    font-size: 14px;
+    border-width: 2px;
+    border-color: black;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+  }
+  
+  .default-button-red {
+    border-width: 2px;
+    border-color: black;
+    width: auto;
+    height: 36px;
+    padding: 0 16px;
+    color: white;
+    font-weight: bold;
+    background-color: #dc3545;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+  }
+  
+  .default-button-green {
+    border-width: 2px;
+    border-color: black;
+    width: auto;
+    height: 36px;
+    padding: 0 16px;
+    color: black;
+    font-weight: bold;
+    background-color: #28a745;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+  }
+  
+  .default-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .default-button-red:hover {
+    background-color: #c82333;
+  }
+  
+  .default-button-green:hover {
+    background-color: #218838;
+  }
+  
+  p.default-text {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-style: bold;
+    color: black;
+  }
+  
+  div.input-container label {
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  input.input-string-label {
+    width: 120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: none;
+    border-color: #ff0000;
+  }
+  
+  input.input-number-label {
+    width: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: none;
+    border-color: #ff0000;
+  }
+  
+  div.add-elements {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    border-width: 2px;
+    border-color: black;
+    border-style: groove;
+    padding: 10px;
+    margin: 15px;
+    color: black;
+  }
+  
+  .remove-category-button {
+    font-weight: bold;
+    font-family: 'Cascadia Code';
+    width: 74px;
+    height: 36px;
+    color: black;
+    background-color: #ffc107;
+    cursor: pointer;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 12px;
+    float: right;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-category-button:hover {
+    background-color: #b69500;
+  }
+  
+  .remove-button {
+    font-weight: bold;
+    font-family: 'Cascadia Code';
+    width: 74px;
+    height: 18px;
+    color: black;
+    background-color: #dc3545;
+    cursor: pointer;
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    float: right;
+  }
+  
+  .remove-button:hover {
+    background-color: #a71d2a;
+  }
+  
+  #json-functions {
+    border-color: black;
+    border-style: groove;
+    border-width: 2px;
+    max-width: 650px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #dc3545;
+    padding: 10px 20px;
+  }
+  
+  .json-button-functions {
+    display: flex;
+  }
+  
+  .json-input-format {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .score-span {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #main-title {
+    color: #333;
+    padding: 10px;
+    background-color: #f8f9fa;
+    display: flex;
     flex-direction: row;
-    width:100%;
-	max-width: 100%;
-	font-style: normal;
-	align-items: center;
-	justify-content: space-between;
-
-}
-
-.title {
-	justify-content: center;
-	width: auto;
-	font-family: monospace;
-	margin-top: 50px;
-	color: black;
-	font-style: normal;
-	display: flex;
-	align-items: center;
-}
-
-.tab button {
-
-    width:fit-content;
+    width: 100%;
+    max-width: 100%;
+    font-style: normal;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .title {
+    justify-content: center;
+    width: auto;
+    font-family: monospace;
+    margin-top: 50px;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+  }
+  
+  .tab button {
+    width: fit-content;
     box-sizing: border-box;
     background-color: inherit;
     float: left;
@@ -292,7 +267,6 @@ div.add-elements {
     cursor: pointer;
     transition: 0.3s;
     font-size: 30px;
-    
   }
   
   .tab button:hover {
@@ -310,110 +284,105 @@ div.add-elements {
     border: 1px solid black;
     box-sizing: border-box;
   }
-
-.site-tabs {
-    
-    width:100%;
+  
+  .site-tabs {
+    width: 100%;
     box-sizing: border-box;
     margin: 10px;
-	color: transparent;
-	font-style: normal;
-	display: flex;
-    border:none;
+    color: transparent;
+    font-style: normal;
+    display: flex;
+    border: none;
     border-bottom: 2px;
     border-bottom-color: black;
-    border-bottom-style:groove;
-}
-
-.bubble {
-	max-width:100%;
-	background-color: rgb(3, 181, 110);
-	padding:10px 10px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-
-h1 {
-	font-weight:bold;
-}
-
-select.default-select {
-	width: 24px;
-	height: 50px;
-	padding: 5px;
-	outline: none;
-	border-color: #ff0000;
-	border-width: 2px;
-}
-
-.boxed {
-	width: 100%;
-	max-width: fit-content;
-	background-color: rgb(174, 222, 40);
-	padding: 5px;
-	margin: 5px;
-}
-
-#grade-stats {
-	max-width: fit-content;
-	height:auto;
-	font-size: 15px;
-	width: 250px;
-	background-color: rgb(84, 220, 0);
-	
-}
-
-
-
-
-#assignment-list {
-	flex: 1 0 auto;
-	padding: 10px 20px;
-	text-align: left;
-	max-width: fit-content;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 10px;
-	list-style-type: circle;
-	float: right;
-	background-color: rgb(4, 185, 10);
-}
-
-#categoryDropdown {
-	min-width: 100px;
-}
-
-#jsonH {
-	text-align: center;
-	color: white;
-}
-
-#goal-setting {
-	max-width: fit-content;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 10px;
-	background-color: #FF6347;
-	padding: 10px 20px;
-}
-
-#json-goals {
-	display: flex;
-	max-width: 100%;
-
-
-}
-
-#add-category {
-	box-sizing: border-box;
-	max-width:fit-content;
-	background-color:#ff9d00;
-	flex: 0 0 auto;
-
-}
-
-#add-assignment {
-	box-sizing: border-box;
-	background-color: #ff9d00;
-	flex: 0 0 auto;
-}
+    border-bottom-style: groove;
+  }
+  
+  .bubble {
+    max-width: 100%;
+    background-color: #6a7077;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  h1 {
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+  
+  select.default-select {
+    width: 24px;
+    height: 50px;
+    padding: 5px;
+    outline: none;
+    border-color: #ff0000;
+    border-width: 2px;
+  }
+  
+  .boxed {
+    width: 100%;
+    max-width: fit-content;
+    background-color: #6c757d;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  #grade-stats {
+    max-width: fit-content;
+    height: auto;
+    font-size: 15px;
+    width: 250px;
+    background-color: #28a745;
+  }
+  
+  #assignment-list {
+    min-width: 500px;
+    flex: 1 0 auto;
+    padding: 10px 20px;
+    text-align: left;
+    max-width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    list-style-type: circle;
+    float: right;
+    background-color: #007bff;
+  }
+  
+  #categoryDropdown {
+    min-width: 100px;
+  }
+  
+  #jsonH {
+    text-align: center;
+    color: white;
+  }
+  
+  #goal-setting {
+    max-width: fit-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: #ff6347;
+    padding: 10px 20px;
+  }
+  
+  #json-goals {
+    display: flex;
+    max-width: 100%;
+  }
+  
+  #add-data {
+    box-sizing: border-box;
+    max-width: fit-content;
+    background-color: #ffea07;
+    flex: 0 0 auto;
+    padding: 10px;
+  }
+  
+  #add-assignment {
+    position: relative;
+  }
+  
