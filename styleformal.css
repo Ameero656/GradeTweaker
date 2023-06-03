@@ -1,5 +1,5 @@
 html {
-	background-image: url("images/background.png");
+    background-color: white;
 	background-size: cover;
 	background-repeat: repeat;
 }
@@ -79,7 +79,6 @@ body {
 	font-size: 14px;
 	border-width: 2px;
 	border-color:black;
-	border-radius: 10px;
 	transition: background-color 0.3s ease;
 	margin: 5px;
 }
@@ -87,7 +86,7 @@ body {
 .default-button-red {
 	border-width: 2px;
 	border-color:black;
-	border-radius: 10px;
+	 
 	width: auto;
 	height: 36px;
 	padding: 0 16px;
@@ -97,7 +96,7 @@ body {
 	cursor: pointer;
 	font-size: 14px;
 	border: none;
-	border-radius: 10px;
+	 
 	transition: background-color 0.3s ease;
 	margin: 5px;
 }
@@ -105,7 +104,7 @@ body {
 .default-button-green {
 	border-width: 2px;
 	border-color:black;
-	border-radius: 10px;
+	 
 	width: auto;
 	height: 36px;
 	padding: 0 16px;
@@ -115,7 +114,7 @@ body {
 	cursor: pointer;
 	font-size: 14px;
 	border: none;
-	border-radius: 10px;
+	 
 	transition: background-color 0.3s ease;
 	margin: 5px;
 }
@@ -143,11 +142,7 @@ p.default-text {
 
 div.input-container label {
 	max-width:100%;
-	background-color: rgb(255, 0, 0);
-	border-style:groove;
-	border-color:black;
-	border-width: 2px;
-	border-radius: 10px;
+	 
 	padding:10px 10px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -159,7 +154,7 @@ input.input-string-label {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 5px;
-	border-radius: 10px;
+	 
 	outline: none;
 	border-color: #ff0000;
 }
@@ -169,7 +164,7 @@ input.input-number-label {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 5px;
-	border-radius: 10px;
+	 
 	outline: none;
 	border-color: #ff0000;;
 }
@@ -179,13 +174,12 @@ div.add-elements {
 	flex-direction: column;
 	box-sizing: border-box;
 	background-color: rgb(50, 198, 239);
-	border-radius: 20px;
 	border-width: 2px;
 	border-color: black;
 	border-style: groove;
-	padding:10px 10px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	padding:10px;
+    padding-top:0px;
+	margin: 15px;
 	color: black;
 
 }
@@ -201,7 +195,7 @@ div.add-elements {
 	margin-left: 4px;
 	margin-right: 4px;
 	font-size: 12px;
-	border-radius: 10px;
+	 
 	float: right;
 	transition: background-color 0.3s ease;
 }
@@ -222,7 +216,6 @@ div.add-elements {
 	margin-left: 4px;
 	margin-right: 4px;
 	font-size: 12px;
-	border-radius: 10px;
 	transition: background-color 0.3s ease;
 	float: right;
 }
@@ -239,7 +232,6 @@ div.add-elements {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: #ff2600;
-	border-radius: 20px;
 	padding: 10px 20px;
 }
 
@@ -262,17 +254,20 @@ div.add-elements {
 	margin-bottom: 10px;
 }
 
-.main-title {
-	max-width: 650px;
-	margin-top: 15px;
-	color: blue;
+
+#main-title {
+    margin:0;
+    padding:10px;
+    background-color: bisque;
+    margin:0;
+    display:flex;
+    flex-direction: row;
+    width:100%;
+	max-width: 100%;
 	font-style: normal;
 	align-items: center;
-	justify-content: center;
-	border-style: dashed;
-	border-width: 2px;
-	border-color: black;
-	border-radius: 10px;
+	justify-content: space-between;
+
 }
 
 .title {
@@ -286,21 +281,53 @@ div.add-elements {
 	align-items: center;
 }
 
-.title-buttons {
-	margin-top: 50px;
-	color: blue;
+.tab button {
+
+    width:fit-content;
+    box-sizing: border-box;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 30px;
+    
+  }
+  
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  .tabcontent {
+    background-color: inherit;
+    display: none;
+    padding: 12px;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+
+.site-tabs {
+    
+    width:100%;
+    box-sizing: border-box;
+    margin: 10px;
+	color: transparent;
 	font-style: normal;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: fit-content;
-	padding: 20px;
+    border:none;
+    border-bottom: 2px;
+    border-bottom-color: black;
+    border-bottom-style:groove;
 }
 
 .bubble {
 	max-width:100%;
-	background-color: rgb(15, 209, 25);
-	border-radius: 20px;
+	background-color: rgb(3, 181, 110);
 	padding:10px 10px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -314,7 +341,6 @@ select.default-select {
 	width: 24px;
 	height: 50px;
 	padding: 5px;
-	border-radius: 10px;
 	outline: none;
 	border-color: #ff0000;
 	border-width: 2px;
@@ -324,7 +350,6 @@ select.default-select {
 	width: 100%;
 	max-width: fit-content;
 	background-color: rgb(174, 222, 40);
-	border-radius: 20px;
 	padding: 5px;
 	margin: 5px;
 }
@@ -335,7 +360,6 @@ select.default-select {
 	font-size: 15px;
 	width: 250px;
 	background-color: rgb(84, 220, 0);
-	border-radius: 20px;
 	
 }
 
@@ -353,7 +377,6 @@ select.default-select {
 	list-style-type: circle;
 	float: right;
 	background-color: rgb(4, 185, 10);
-	border-radius: 20px;
 }
 
 #categoryDropdown {
@@ -371,7 +394,6 @@ select.default-select {
 	margin-bottom: 10px;
 	margin-left: 10px;
 	background-color: #FF6347;
-	border-radius: 20px;
 	padding: 10px 20px;
 }
 
@@ -386,7 +408,6 @@ select.default-select {
 	box-sizing: border-box;
 	max-width:fit-content;
 	background-color:#ff9d00;
-	border-radius: 20px;
 	flex: 0 0 auto;
 
 }
@@ -394,6 +415,5 @@ select.default-select {
 #add-assignment {
 	box-sizing: border-box;
 	background-color: #ff9d00;
-	border-radius: 20px;
 	flex: 0 0 auto;
 }

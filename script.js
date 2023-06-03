@@ -36,6 +36,28 @@ function goToPage(file) {
 	window.location.href = file;
 }
 
+function openTab(event, tabName) {
+    // Hide all tabcontent elements
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove the active class from all tablinks/buttons
+    var tablinks = document.getElementsByClassName("tab");
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the specific tab content
+    document.getElementById(tabName).style.display = "block";
+
+    // Add the active class to the button that opened the tab
+    event.currentTarget.className += " active";
+    event.currentTarget.style.borderBottom = "none"; // Remove bottom border from active tab
+}
+
+
 function removeButtonClickHandler(event) {
 	var category = event.target.getAttribute("data-category");
 	var assignmentName = event.target.getAttribute("data-assignment");

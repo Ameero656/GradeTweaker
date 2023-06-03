@@ -7,7 +7,7 @@
 <head>
 
 	<title>Tweaker</title>
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="styleformal.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,16 +20,16 @@
 
 	<script src="script.js"></script>
 
-	<div id="title" class=main-title>
-		<img class="imageLogo" src="images/gradeTweakerLogo.png" alt="loading..." />
-		<div class=title-buttons>
-			<button onclick="goToPage('index.html')" class="default-button">Tweaker</button>
-			<button onclick="goToPage('goalpage.html')"id="goalpage-button" class="default-button">GoalSetting</button>
-			<button class="default-button">Bug Report</button>
-		</div>
+	<div id=main-title>
+		<h1>Grade Calculator</h1>
 	</div>
+	<div class=site-tabs>
+		<button class="tab" onclick="openTab(event, 'Tweaker')">Tweaker</button>
+		<button class="tab" onclick="openTab(event, 'GoalSetting')">GoalSetting</button>
+		<button class="tab" onclick="openTab(event, 'BugReport')">Bug Report</button>
+	</div>
+	<div id="Tweaker" class="tabcontent add-elements">
 
-	<div class="add-elements">
 			<div id="add-category" class="add-elements">
 				
 				<h1 class="title, bubble">Add Category</h1>
