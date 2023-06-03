@@ -323,7 +323,6 @@ html {
   
   .boxed {
     width: 100%;
-    max-width: fit-content;
     background-color: #6c757d;
     padding: 5px;
     margin: 5px;
